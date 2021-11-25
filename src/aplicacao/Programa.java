@@ -52,7 +52,8 @@ public class Programa {
 		System.out.println();
 		System.out.print("Entre com o mês e ano para calcular salário (MM/YYYY/): ");
 		String mesEano = sc.next();
-		int mes = mesEano.substring(0, 2)//informar o inicío e o fim onde quero recortar String 
+		int mes = Integer.parseInt( mesEano.substring(0, 2));
+		
 		
 		sc.close();
 		
