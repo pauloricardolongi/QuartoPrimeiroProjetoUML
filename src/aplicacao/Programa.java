@@ -24,8 +24,13 @@ public class Programa {
 		System.out.print("Salário Base: ");
 		double salarioBase = sc.nextDouble();
 		
+		//Diagrama de Objetos
+		
 		Trabalhador trabalhador = new Trabalhador(nomeTrabalhador, NivelTrabalhador.valueOf(nivelTrabalhador),
 		salarioBase, new Departamento(departamentoNome));
+		
+		
+		
 		
 		
 		
