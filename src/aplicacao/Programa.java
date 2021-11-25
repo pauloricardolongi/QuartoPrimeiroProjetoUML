@@ -45,6 +45,8 @@ public class Programa {
 			System.out.print("Duração (horas): ");
 			int horas = sc.nextInt();
 			ContratoHora contrato = new ContratoHora(contratoDate,valorPorHora,horas);
+			//fazer o contrato ser associado  com trabalhador, chamar o metodo trabalhador instanciado acima
+			trabalhador.addContrato(contrato);
 		}
 		
 		sc.close();
