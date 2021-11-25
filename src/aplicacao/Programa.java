@@ -54,6 +54,10 @@ public class Programa {
 		String mesEano = sc.next();
 		int mes = Integer.parseInt( mesEano.substring(0, 2));
 		int ano = Integer.parseInt(mesEano.substring(3));
+		System.out.println("Nome: " + trabalhador.getNome());
+		System.out.println("Departamento: " + trabalhador.getDepartamento().getNome());
+		System.out.println("Renda do " + mesEano + ": " + trabalhador.renda(ano, mes));
+		
 		
 		sc.close();
 		

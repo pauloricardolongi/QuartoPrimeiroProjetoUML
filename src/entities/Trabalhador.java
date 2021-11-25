@@ -73,7 +73,7 @@ public class Trabalhador {
 	}
 	/*percorrer os contratos deste funcionário, testando quais os contratos que são deste mês e ano
 	e se o contrato for deste mes e ano vai entrar na soma*/
-	public double calcular (int ano, int mes) {
+	public double renda (int ano, int mes) {
 		double soma = salarioBase;	
 		Calendar cal = Calendar.getInstance();
 		for (ContratoHora c : contratos) {
