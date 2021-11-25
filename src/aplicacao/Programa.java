@@ -39,9 +39,10 @@ public class Programa {
 			System.out.println("Entre com contrato # " + i + " dados: ");
 			System.out.print("Date (DD/MM/YYYY): ");
 			Date contratoDate = sdf.parse(sc.next());
-			
-			
-			
+			System.out.print("Valor por hora: ");
+			double valorPorHora = sc.nextDouble();
+			System.out.print("Duração (horas): ");
+			int horas = sc.nextInt();
 			
 		}
 		
