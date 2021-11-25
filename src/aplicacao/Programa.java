@@ -39,15 +39,20 @@ public class Programa {
 		for(int i=1; i<n; i++) {
 			System.out.println("Entre com contrato # " + i + " dados: ");
 			System.out.print("Date (DD/MM/YYYY): ");
-			Date contratoDate = sdf.parse(sc.next());
+			Date data = sdf.parse(sc.next());
 			System.out.print("Valor por hora: ");
 			double valorPorHora = sc.nextDouble();
 			System.out.print("Duração (horas): ");
 			int horas = sc.nextInt();
-			ContratoHora contrato = new ContratoHora(contratoDate,valorPorHora,horas);
+			ContratoHora contrato = new ContratoHora(data,valorPorHora,horas);
 			//fazer o contrato ser associado  com trabalhador, chamar o metodo trabalhador instanciado acima
 			trabalhador.addContrato(contrato);
+			
 		}
+		System.out.println();
+		System.out.print("Entre com o mês e ano para calcular salário (MM/YYYY/): ");
+		String mesEano = sc.next();
+		int mes = mesEano.substring(0, 2)//informar o inicío e o fim onde quero recortar String 
 		
 		sc.close();
 		
