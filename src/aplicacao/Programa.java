@@ -1,5 +1,6 @@
 package aplicacao;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -11,7 +12,7 @@ import entities.enums.NivelTrabalhador;
 
 public class Programa {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -37,6 +38,8 @@ public class Programa {
 		for(int i=1; i<n; i++) {
 			System.out.println("Entre com contrato # " + i + " dados: ");
 			System.out.print("Date (DD/MM/YYYY): ");
+			Date contratoDate = sdf.parse(sc.next());
+			
 			
 			
 			
