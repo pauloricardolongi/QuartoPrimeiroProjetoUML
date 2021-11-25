@@ -21,7 +21,7 @@ public class Programa {
 		
 		System.out.print("Entre com o nome do Departamento: ");
 		String departamentoNome = sc.nextLine();
-		System.out.print("Entre com os dados do Trabalhador: ");
+		System.out.println("Entre com os dados do Trabalhador: ");
 		System.out.print("Nome: ");
 		String nomeTrabalhador = sc.nextLine();
 		System.out.print("Nível: ");
@@ -36,29 +36,29 @@ public class Programa {
 		
 		System.out.print("Quantos contratos este trabalhador vai ter? ");
 		int n = sc.nextInt();
-		for(int i=1; i<n; i++) {
-			System.out.println("Entre com contrato # " + i + " dados: ");
+		
+		for(int i=0; i<n; i++) {
+			System.out.println("Entre com contrato # " + i +  " dados: ");
 			System.out.print("Date (DD/MM/YYYY): ");
 			Date data = sdf.parse(sc.next());
 			System.out.print("Valor por hora: ");
 			double valorPorHora = sc.nextDouble();
 			System.out.print("Duração (horas): ");
 			int horas = sc.nextInt();
-			ContratoHora contrato = new ContratoHora(data,valorPorHora,horas);
-			//fazer o contrato ser associado  com trabalhador, chamar o metodo trabalhador instanciado acima
+			ContratoHora contrato = new ContratoHora(data ,valorPorHora,horas);
+			
 			trabalhador.addContrato(contrato);
 			
 		}
+		
 		System.out.println();
-		System.out.print("Entre com o mês e ano para calcular salário (MM/YYYY/): ");
-		String mesEano = sc.next();
-		int mes = Integer.parseInt( mesEano.substring(0, 2));
-		int ano = Integer.parseInt(mesEano.substring(3));
+		System.out.print("Entre com o mês e ano para calcular salário (MM/YYYY): ");
+		String monthAndYear  = sc.next();
+		int month = Integer.parseInt( monthAndYear.substring(0, 2));
+		int yer = Integer.parseInt(monthAndYear.substring(3));
 		System.out.println("Nome: " + trabalhador.getNome());
 		System.out.println("Departamento: " + trabalhador.getDepartamento().getNome());
-		System.out.println("Renda do " + mesEano + ": " + String.format("%.2f",trabalhador.renda(ano, mes)));
-		
-		
+		System.out.println("Renda do " + monthAndYear + ": " + String.format("%.2f",trabalhador.renda(yer, month)));
 		
 		sc.close();
 		

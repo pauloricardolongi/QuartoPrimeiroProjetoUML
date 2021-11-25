@@ -73,14 +73,14 @@ public class Trabalhador {
 	}
 	/*percorrer os contratos deste funcionário, testando quais os contratos que são deste mês e ano
 	e se o contrato for deste mes e ano vai entrar na soma*/
-	public double renda (int ano, int mes) {
+	public double renda (int year, int month) {
 		double soma = salarioBase;	
 		Calendar cal = Calendar.getInstance();
 		for (ContratoHora c : contratos) {
 			cal.setTime(c.getDate());
-			int c_ano = cal.get(Calendar.YEAR);
-		    int c_mes = 1 + cal.get(Calendar.MONTH);
-			if (ano == c_ano && mes == c_mes) {
+			int c_year = cal.get(Calendar.YEAR);
+		    int c_month = 1 + cal.get(Calendar.MONTH);
+			if (year == c_year && month == c_month) {
 				soma +=  c.valorTotal();
 			}
 		}
