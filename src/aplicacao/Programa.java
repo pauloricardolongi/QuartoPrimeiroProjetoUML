@@ -1,5 +1,7 @@
 package aplicacao;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -13,6 +15,7 @@ public class Programa {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		System.out.print("Entre com o nome do Departamento: ");
 		String departamentoNome = sc.nextLine();
@@ -36,9 +39,8 @@ public class Programa {
 			System.out.print("Date (DD/MM/YYYY): ");
 			
 			
+			
 		}
-		
-		
 		
 		sc.close();
 		
