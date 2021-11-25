@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.ContratoHora;
 import entities.Departamento;
 import entities.Trabalhador;
 import entities.enums.NivelTrabalhador;
@@ -43,7 +44,7 @@ public class Programa {
 			double valorPorHora = sc.nextDouble();
 			System.out.print("Duração (horas): ");
 			int horas = sc.nextInt();
-			
+			ContratoHora contrato = new ContratoHora(contratoDate,valorPorHora,horas);
 		}
 		
 		sc.close();
