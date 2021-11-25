@@ -56,7 +56,8 @@ public class Programa {
 		int ano = Integer.parseInt(mesEano.substring(3));
 		System.out.println("Nome: " + trabalhador.getNome());
 		System.out.println("Departamento: " + trabalhador.getDepartamento().getNome());
-		System.out.println("Renda do " + mesEano + ": " + trabalhador.renda(ano, mes));
+		System.out.println("Renda do " + mesEano + ": " + String.format("%.2f",trabalhador.renda(ano, mes)));
+		
 		
 		
 		sc.close();
