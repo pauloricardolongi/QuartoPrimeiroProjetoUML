@@ -29,10 +29,14 @@ public class Programa {
 		Trabalhador trabalhador = new Trabalhador(nomeTrabalhador, NivelTrabalhador.valueOf(nivelTrabalhador),
 		salarioBase, new Departamento(departamentoNome));
 		
-		
-		
-		
-		
+		System.out.print("Quantos contratos este trabalhador vai ter? ");
+		int n = sc.nextInt();
+		for(int i=1; i<n; i++) {
+			System.out.println("Entre com contrato # " + i + " dados: ");
+			System.out.print("Date (DD/MM/YYYY): ");
+			
+			
+		}
 		
 		
 		
