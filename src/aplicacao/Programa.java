@@ -53,7 +53,7 @@ public class Programa {
 		System.out.print("Entre com o mês e ano para calcular salário (MM/YYYY/): ");
 		String mesEano = sc.next();
 		int mes = Integer.parseInt( mesEano.substring(0, 2));
-		
+		int ano = Integer.parseInt(mesEano.substring(3));
 		
 		sc.close();
 		
