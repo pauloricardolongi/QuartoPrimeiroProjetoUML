@@ -37,7 +37,7 @@ public class Programa {
 		System.out.print("Quantos contratos este trabalhador vai ter? ");
 		int n = sc.nextInt();
 		
-		for(int i=0; i<n; i++) {
+		for(int i=1; i<=n; i++) {
 			System.out.println("Entre com contrato # " + i +  " dados: ");
 			System.out.print("Date (DD/MM/YYYY): ");
 			Date data = sdf.parse(sc.next());
